@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Title | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">YourName<span>Dev</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / GAME HEADER -->
+  <section class="game-hero">
+    <div class="game-hero-content">
+      <h1>Game Title</h1>
+      <p>An immersive adventure in [genre]. Explore, fight, and craft your own story.</p>
+      <a href="#download" class="btn hero-btn">Play / Download</a>
+    </div>
+  </section>
+
+  <!-- ABOUT THE GAME -->
+  <section class="game-description">
+    <h2>About the Game</h2>
+    <p>This game is a [genre] experience built in [Unity / Unreal]. It features [core gameplay features]. The player can [key interactions]. Development focused on [mechanics, AI, graphics, and sound].</p>
+    
+    <!-- Tech Badges -->
+    <div class="tech-badges">
+      <span>Unity</span>
+      <span>C#</span>
+      <span>Blender</span>
+      <span>Unreal Engine</span>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT CAROUSEL -->
+  <section class="game-gallery">
+    <h2>Screenshots</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="screenshot1.jpg" alt="Screenshot 1"></div>
+        <div class="swiper-slide"><img src="screenshot2.jpg" alt="Screenshot 2"></div>
+        <div class="swiper-slide"><img src="screenshot3.jpg" alt="Screenshot 3"></div>
+      </div>
+      <!-- navigation arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="game-features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Open-world exploration with dynamic weather</li>
+      <li>Advanced AI enemies and companions</li>
+      <li>Crafting and upgrade system</li>
+      <li>Immersive sound and visuals</li>
+    </ul>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" class="game-download">
+    <h2>Play or Download</h2>
+    <div class="download-links">
+      <a href="https://yourgame.itch.io" target="_blank" class="btn">Itch.io</a>
+      <a href="https://github.com/YourRepo" target="_blank" class="btn">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name — Game Developer</p>
+  </footer>
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
+</html>
