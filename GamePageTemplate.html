@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Showcase</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #0d0d0d;
+        color: #ffffff;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Back button */
+    .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 8px 14px;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Main section */
+    .main {
+        display: flex;
+        flex: 1;
+        padding: 60px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left img {
+        max-width: 100%;
+        max-height: 70vh;
+        border: 1px solid #fff;
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .right h1 {
+        margin-bottom: 20px;
+        font-size: 36px;
+    }
+
+    .right p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ccc;
+    }
+
+    /* Carousel */
+    .carousel {
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .carousel img {
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        border: 1px solid #fff;
+    }
+
+    .carousel button {
+        background: none;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .carousel button:hover {
+        background: #fff;
+        color: #000;
+    }
+
+</style>
+</head>
+
+<body>
+
+<a href="#" class="back-btn" onclick="history.back()">← Back</a>
+
+<div class="main">
+    <div class="left">
+        <img id="mainImage" src="https://via.placeholder.com/600x400" alt="Game Screenshot">
+    </div>
+
+    <div class="right">
+        <h1>Your Game Title</h1>
+        <p>
+            This is a short summary of your game. Describe the gameplay, genre,
+            and what makes it unique. Keep it concise and engaging so visitors
+            quickly understand what your game is about.
+        </p>
+    </div>
+</div>
+
+<div class="carousel">
+    <button onclick="prevImage()">←</button>
+
+    <img src="https://via.placeholder.com/200x120?text=1" onclick="setImage(this.src)">
+    <img src="https://via.placeholder.com/200x120?text=2" onclick="setImage(this.src)">
+    <img src="https://via.placeholder.com/200x120?text=3" onclick="setImage(this.src)">
+
+    <button onclick="nextImage()">→</button>
+</div>
+
+<script>
+    const images = [
+        "https://via.placeholder.com/600x400?text=1",
+        "https://via.placeholder.com/600x400?text=2",
+        "https://via.placeholder.com/600x400?text=3"
+    ];
+
+    let currentIndex = 0;
+
+    function setImage(src) {
+        document.getElementById("mainImage").src = src;
+        currentIndex = images.indexOf(src);
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("mainImage").src = images[currentIndex];
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById("mainImage").src = images[currentIndex];
+    }
+</script>
+
+</body>
+</html>

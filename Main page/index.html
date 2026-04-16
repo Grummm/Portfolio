@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #0d0d0d;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* HERO */
+    .hero {
+        height: 100vh;
+        background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+        position: relative;
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        color: #ccc;
+        line-height: 1.6;
+    }
+
+    .scroll-down {
+        position: absolute;
+        bottom: 30px;
+        font-size: 14px;
+        color: #aaa;
+    }
+
+    /* PROJECTS */
+    .projects {
+        padding: 60px 40px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    /* CLICKABLE CARD */
+    .card {
+        display: block;
+        border: 1px solid #fff;
+        background: #111;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        background: #1a1a1a;
+    }
+
+    .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-bottom: 1px solid #fff;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Your Name</h1>
+        <p>
+            Short introduction about yourself. Mention your skills and what you build.
+        </p>
+    </div>
+
+    <div class="scroll-down">SCROLL ↓</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects">
+    <div class="grid">
+
+        <a href="project1.html" class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="card-content">
+                <h3>Project One</h3>
+                <p>Short description of the project.</p>
+            </div>
+        </a>
+
+        <a href="project2.html" class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="card-content">
+                <h3>Project Two</h3>
+                <p>Short description of the project.</p>
+            </div>
+        </a>
+
+        <a href="project3.html" class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="card-content">
+                <h3>Project Three</h3>
+                <p>Short description of the project.</p>
+            </div>
+        </a>
+
+        <a href="project4.html" class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="card-content">
+                <h3>Project Four</h3>
+                <p>Short description of the project.</p>
+            </div>
+        </a>
+
+        <a href="project5.html" class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="card-content">
+                <h3>Project Five</h3>
+                <p>Short description of the project.</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+</body>
+</html>
